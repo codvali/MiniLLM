@@ -1,8 +1,9 @@
 # MiniLLM
 
 A thin, zero-dependency orchestrator over `llama-server` (llama.cpp)
-that speaks **both** the Ollama API and the OpenAI API — and exposes
-the llama.cpp features Ollama hides.
+that speaks **both** the Ollama API and the OpenAI API — and gives you
+the full llama.cpp surface (speculative decoding, per-model tuning,
+hard resource budgets) in a single file.
 
 **Python 3.9+ stdlib only. One file. No pip install.**
 
