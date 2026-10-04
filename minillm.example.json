@@ -1,0 +1,48 @@
+{
+  "listen": "127.0.0.1",
+  "port": 11435,
+  "llama_server": "/home/USER/llama.cpp/build/bin/llama-server",
+  "ollama_dir": "/home/USER/.ollama/models",
+  "max_loaded": 3,
+  "ram_budget_gb": 40,
+  "keep_alive_s": 1800,
+  "load_timeout_s": 300,
+  "log_dir": "/home/USER/.cache/minillm",
+  "auto_dir": "/home/USER/minillm/models",
+  "auto_port_base": 12600,
+  "defaults": {
+    "threads": 8,
+    "batch": 1024,
+    "ubatch": 256,
+    "ngl": 0,
+    "flash_attn": true,
+    "cache_type_k": "q8_0",
+    "cache_type_v": "q8_0"
+  },
+  "models": {
+    "minicpm5:2b": {
+      "ollama": "minicpm5:2b",
+      "port": 12501,
+      "ctx": 4096,
+      "est_gb": 2.0
+    },
+    "qwen3:14b": {
+      "ollama": "qwen3:14b",
+      "port": 12502,
+      "ctx": 16384,
+      "est_gb": 12.0,
+      "draft": {"ollama": "qwen3:0.6b"},
+      "draft_max": 16,
+      "draft_min": 4,
+      "draft_ctx": 4096
+    },
+    "my-vision-model": {
+      "gguf": "/path/to/model.gguf",
+      "port": 12506,
+      "ctx": 4096,
+      "est_gb": 1.7,
+      "vision": true,
+      "extra_args": ["--mmproj", "/path/to/mmproj.gguf", "--parallel", "1"]
+    }
+  }
+}

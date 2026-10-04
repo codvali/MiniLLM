@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+minillm.json
+models/
+*.gguf
+*.part
+backups/

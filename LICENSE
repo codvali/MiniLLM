@@ -1,0 +1,39 @@
+MiniLLM — Personal Use License
+
+Copyright (c) 2026 Valentin Condei. All rights reserved.
+
+GRANT — PERSONAL USE
+
+Permission is hereby granted, free of charge, to any NATURAL PERSON
+obtaining a copy of this software and associated documentation files
+(the "Software"), to use, copy, modify, and run the Software for
+PERSONAL, NON-COMMERCIAL purposes, subject to the conditions below.
+
+CONDITIONS
+
+1. This license and the copyright notice above must be included in
+   all copies or substantial portions of the Software.
+2. The Software may be used by individuals for personal projects,
+   learning, research, and self-hosted use at no cost.
+3. The Software, in whole or in part, may NOT be:
+   - used by or on behalf of a company, organization, or any
+     revenue-generating activity;
+   - sold, sublicensed, offered as a hosted/paid service, or
+     included in a commercial product;
+   - redistributed publicly in modified or unmodified form
+     (forks/mirrors) without the author's written permission.
+
+COMMERCIAL USE
+
+Any use that is not personal and non-commercial — including internal
+use inside a company — requires a separate written license from the
+author. Contact: via the GitHub repository.
+
+NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE SOFTWARE OR ITS
+USE.

@@ -1,0 +1,11 @@
+[Unit]
+Description=MiniLLM — llama-server orchestrator (Ollama-compatible API)
+After=network.target
+
+[Service]
+ExecStart=%h/minillm/minillm.py --config %h/minillm/minillm.json
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
