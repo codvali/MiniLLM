@@ -1,11 +1,38 @@
 # MiniLLM
 
-A thin, zero-dependency orchestrator over `llama-server` (llama.cpp)
-that speaks **both** the Ollama API and the OpenAI API — and gives you
-the full llama.cpp surface (speculative decoding, per-model tuning,
-hard resource budgets) in a single file.
+**One Python file. Zero dependencies. Both APIs.**
 
-**Python 3.9+ stdlib only. One file. No pip install.**
+A thin orchestrator over `llama-server` (llama.cpp) that speaks
+**both** the Ollama API and the OpenAI API — and gives you the full
+llama.cpp surface (speculative decoding, per-model tuning, hard
+resource budgets) in a single file.
+
+[![License](https://img.shields.io/badge/license-personal%20use-blue)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue)]()
+[![llama.cpp](https://img.shields.io/badge/backend-llama.cpp-green)]()
+[![deps](https://img.shields.io/badge/deps-0-brightgreen)]()
+
+### Try it
+
+```bash
+cp minillm.example.json minillm.json   # set llama_server + models
+./minillm.py --config minillm.json     # that's it — server on :11435
+```
+
+```bash
+# Ollama-style
+curl http://127.0.0.1:11435/api/generate -d '{
+  "model": "qwen3:14b", "prompt": "hello", "stream": false }'
+
+# OpenAI-style (streaming works)
+curl http://127.0.0.1:11435/v1/chat/completions -d '{
+  "model": "qwen3:14b",
+  "messages": [{"role": "user", "content": "Why is the sky blue?"}]
+}'
+
+# Drop a GGUF into auto_dir → served as a model in ~15s
+./pull.sh Qwen/Qwen3-8B-GGUF Qwen3-8B-Q4_K_M.gguf
+```
 
 ## What it is
 
